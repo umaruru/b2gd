@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cf5rjaied4d6y"]
+
+[ext_resource type="Script" uid="uid://chgdfod3kmq7n" path="res://test/multiple_convex/multiple_convex.gd" id="1_jn0ab"]
+[ext_resource type="ArrayMesh" uid="uid://cky2s4y8evh0a" path="res://test/multiple_convex/suzanne.obj" id="2_wsu6t"]
+
+[node name="MultipleConvex" type="Node3D"]
+script = ExtResource("1_jn0ab")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_wsu6t")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.927973, 0.0786289, -0.364258, 0, 0.977486, 0.211001, 0.372648, -0.195803, 0.90708, -9.01508, 4.30561, 20.1202)
+fov = 46.7165

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8qimbwv6k0c5"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_shlyd"]
+
+[sub_resource type="TorusMesh" id="TorusMesh_gqrdi"]
+inner_radius = 0.888
+
+[node name="SceneToReplace2" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_shlyd")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+mesh = SubResource("TorusMesh_gqrdi")

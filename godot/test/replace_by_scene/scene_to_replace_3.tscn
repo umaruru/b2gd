@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://biyc2r0t7klmw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5ti4s"]
+
+[sub_resource type="TextMesh" id="TextMesh_7w0la"]
+text = "This is text =D"
+uppercase = true
+
+[node name="SceneToReplace3" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.906556, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_5ti4s")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.68026, 0, 0, 0, 2.10126, 1.66388, 0, -1.66388, 2.10126, 0, 0.665676, 0)
+mesh = SubResource("TextMesh_7w0la")

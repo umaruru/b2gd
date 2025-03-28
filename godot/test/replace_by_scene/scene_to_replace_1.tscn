@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbl34wbrj8577"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_igjs2"]
+albedo_color = Color(0.913725, 0.52549, 0.0117647, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_xwl6l"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_asgdt"]
+albedo_color = Color(1, 0.352941, 0.607843, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_mmyqi"]
+height = 0.25
+
+[node name="SceneToReplace1" type="Node3D"]
+
+[node name="bulb" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -6.62274e-08, -6.62274e-08)
+material_override = SubResource("StandardMaterial3D_igjs2")
+mesh = SubResource("SphereMesh_xwl6l")
+
+[node name="petal" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1.8783, 0, 1, -8.2103e-08, 0, 1.6, 3.71083e-09)
+material_override = SubResource("StandardMaterial3D_asgdt")
+mesh = SubResource("CylinderMesh_mmyqi")
+
+[node name="petal2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.707107, 0, -1.32816, -0.707107, -4.37114e-08, -1.32816, -3.09086e-08, 1, -5.80556e-08, 1.13137, 1.13137, -1.67736e-08)
+material_override = SubResource("StandardMaterial3D_asgdt")
+mesh = SubResource("CylinderMesh_mmyqi")
+
+[node name="petal3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0, 0, -1.8783, -1, -4.37114e-08, 0, -4.37114e-08, 1, 0, 1.6, -6.62274e-08, -6.62274e-08)
+material_override = SubResource("StandardMaterial3D_asgdt")
+mesh = SubResource("CylinderMesh_mmyqi")
+
+[node name="petal4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.707107, 0, -1.32816, -0.707107, -4.37114e-08, 1.32816, -7.30555e-08, 1, -2.11087e-08, 1.13137, -1.13137, -1.15681e-07)
+material_override = SubResource("StandardMaterial3D_asgdt")
+mesh = SubResource("CylinderMesh_mmyqi")
+
+[node name="petal5" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, 0, 0, -4.37114e-08, 1.8783, 0, 1, 8.2103e-08, 0, -1.6, -1.36166e-07)
+material_override = SubResource("StandardMaterial3D_asgdt")
+mesh = SubResource("CylinderMesh_mmyqi")
+
+[node name="petal6" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.707106, 0, 1.32816, 0.707106, -4.37114e-08, 1.32816, 3.09086e-08, 1, 5.80556e-08, -1.13137, -1.13137, -1.15681e-07)
+material_override = SubResource("StandardMaterial3D_asgdt")
+mesh = SubResource("CylinderMesh_mmyqi")
+
+[node name="petal7" type="MeshInstance3D" parent="."]
+transform = Transform3D(0, 0, 1.8783, 1, -4.37114e-08, 0, 4.37114e-08, 1, 0, -1.6, -6.62274e-08, -6.62274e-08)
+material_override = SubResource("StandardMaterial3D_asgdt")
+mesh = SubResource("CylinderMesh_mmyqi")
+
+[node name="petal8" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.707106, 0, 1.32816, 0.707106, -4.37114e-08, -1.32816, 3.09086e-08, 1, -5.80556e-08, -1.13137, 1.13137, -1.67736e-08)
+material_override = SubResource("StandardMaterial3D_asgdt")
+mesh = SubResource("CylinderMesh_mmyqi")
