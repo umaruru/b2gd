@@ -259,14 +259,15 @@ class B2GDUIMainPanel(bpy.types.Panel):
         box.label(text = obj.name)
         
         if obj.get(prop_name, None) == None:
-            layout.operator("object.b2gd_add_data_replace_by_scene")
-            layout.operator("object.b2gd_add_data_geometry")
-            layout.operator("object.b2gd_add_data_curve")
+            layout.operator("object.b2gd_replace_by_scene")
+            layout.operator("object.b2gd_geometry")
+            layout.operator("object.b2gd_curve")
         
         else:
             mode = obj[prop_name].get("mode", -1)
 
             if mode != -1:
+                layout.operator("object.b2gd_copy")
                 layout.operator("object.b2gd_remove_data")
                 # layout.prop(scene.b2gd_data__, "mode")
 

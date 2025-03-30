@@ -655,10 +655,13 @@ class B2GDPropData(bpy.types.PropertyGroup):
     ) # type: ignore
 
     replace_by_scene: bpy.props.PointerProperty(type = B2GDPropReplaceByScene) # type: ignore
-
     curve: bpy.props.PointerProperty(type = B2GDPropCurve) # type: ignore
-
     geometry: bpy.props.PointerProperty(type = B2GDPropGeometry) # type: ignore
+
+    # props for operators
+
+    copy_source_object: bpy.props.PointerProperty(type = bpy.types.Object) # type: ignore
+    copy_target_collection: bpy.props.PointerProperty(type = bpy.types.Collection) # type: ignore
 
 
 
