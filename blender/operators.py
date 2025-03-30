@@ -6,6 +6,7 @@ prop_name = "b2gd_data__"
 class B2GDOperatorAddDataReplaceByScene(bpy.types.Operator):
     bl_idname = "object.b2gd_replace_by_scene"
     bl_label = "Replace by scene"
+    bl_description = "Replaces this object by an instance a scene."
     bl_options = {'REGISTER', 'UNDO'}
 
     @classmethod
@@ -20,6 +21,7 @@ class B2GDOperatorAddDataReplaceByScene(bpy.types.Operator):
 class B2GDOperatorAddDataGeometry(bpy.types.Operator):
     bl_idname = "object.b2gd_geometry"
     bl_label = "Geometry Options"
+    bl_description = "Edit MeshInstance3D properties, create collision objects, navigation region and occluder."
     bl_options = {'REGISTER', 'UNDO'}
 
     @classmethod
@@ -35,6 +37,7 @@ class B2GDOperatorAddDataGeometry(bpy.types.Operator):
 class B2GDOperatorAddDataCurve(bpy.types.Operator):
     bl_idname = "object.b2gd_curve"
     bl_label = "Path3D from Curve"
+    bl_description = "Creates a Path3D from a Bezier Curve."
     bl_options = {'REGISTER', 'UNDO'}
 
     @classmethod
@@ -50,6 +53,7 @@ class B2GDOperatorAddDataCurve(bpy.types.Operator):
 class B2GDOperatorRemoveData(bpy.types.Operator):
     bl_idname = "object.b2gd_remove_data"
     bl_label = "Remove B2GD data"
+    bl_description = "Remove B2GD data from the object."
     bl_options = {'REGISTER', 'UNDO'}
 
     @classmethod
@@ -66,7 +70,8 @@ class B2GDOperatorRemoveData(bpy.types.Operator):
 
 class B2GDOperatorAddGLTFExportSettings(bpy.types.Operator):
     bl_idname = "object.b2gd_add_gltf_settings"
-    bl_label = "Enable \"Include Custom Properties\" in GLTF Export Settings"
+    bl_label = "Enable \"Include Custom Properties\" in glTF Export Settings"
+    bl_description = "Enable \"Include > Custom Properties\" in the glTF export settings. Needed to export B2GD data."
     bl_options = {'REGISTER', 'UNDO'}
     
     @classmethod
@@ -85,6 +90,7 @@ class B2GDOperatorAddGLTFExportSettings(bpy.types.Operator):
 class B2GDOperatorCopyData(bpy.types.Operator):
     bl_idname = "object.b2gd_copy"
     bl_label = "Copy B2GD data"
+    bl_description = "Copy B2GD data from an object to the selected objects or a collection."
     bl_options = {'REGISTER', 'UNDO'}
 
     source_mode: bpy.props.EnumProperty(
@@ -172,7 +178,7 @@ classes = [
     B2GDOperatorAddDataCurve,
     B2GDOperatorRemoveData,
 
-    B2GDOperatorCopyData,
-
     B2GDOperatorAddGLTFExportSettings,
+
+    B2GDOperatorCopyData,
 ]
