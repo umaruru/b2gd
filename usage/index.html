@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Usage - B2GD Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Usage";
+        var mkdocs_page_input_path = "usage.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> B2GD Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../install/">Installing B2GD</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Usage</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#replace-by-scene">Replace by scene</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#geometry-options">Geometry options</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#mesh-instance">Mesh Instance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#generate-collision">Generate Collision</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#body">Body</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#shape">Shape</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#generate-navigation">Generate Navigation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#generate-occluder">Generate Occluder</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQ</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">B2GD Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Usage</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="usage">Usage</h1>
+<p>B2GD is located at the 3D view on the right panel (default shortcut <code>N</code>).</p>
+<p>TODO: add b2gd panel image</p>
+<p>It can be added to an object individually or copied to other objects.</p>
+<p>TODO: </p>
+<ul>
+<li><a href="#replace-by-scene">Replace by scene</a></li>
+<li><a href="#geometry-options">Geometry options</a></li>
+</ul>
+<hr />
+<h2 id="replace-by-scene">Replace by scene</h2>
+<p>This mode replaces the object by a scene.</p>
+<ul>
+<li><code>Path or UID</code>: The scene path or UID. You can get this by going in the filesystem
+tab in Godot and selecting <code>Copy Path</code> or <code>Copy UID</code>.</li>
+</ul>
+<p>TODO: Add image with these, crossing <code>copy absolute path</code></p>
+<ul>
+<li>
+<p><code>Discard position</code>: The object position will be ignored and the scene will be placed
+at <code>[0, 0, 0]</code>.</p>
+</li>
+<li>
+<p><code>Discard rotation</code>: The object rotation will be ignored and the scene will have a rotation
+of <code>[0, 0, 0]</code>.</p>
+</li>
+<li>
+<p><code>Discard scale</code>: The object rotation will be ignored and the scene will have a scale of
+<code>[1, 1, 1]</code>.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All discard options are applied to the scene local coordinates. If the parent has a
+transform, it will be propagated to the scene as well.
+A <a href="https://docs.godotengine.org/en/4.4/classes/class_node3d.html#class-node3d-property-top-level"><code>top_level</code></a> property may be added in the future.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The plugin tries to copy all the data from the replaced object to the instanced scene: metadata,
+children, groups, etc.
+If there's other user cases where the data should be copied, please open an issue.</p>
+</div>
+<hr />
+<h2 id="geometry-options">Geometry options</h2>
+<p>This mode allows to set Node properties to Mesh objects, as well as creating collider, 
+navigation region and occluder.</p>
+<h3 id="mesh-instance">Mesh Instance</h3>
+<p>The <code>Mesh</code> checkbox allows to set
+<a href="https://docs.godotengine.org/en/4.4/classes/class_visualinstance3d.html"><code>VisualInstance3D</code></a>
+and <a href="https://docs.godotengine.org/en/4.4/classes/class_geometryinstance3d.html"><code>GeometryInstance3D</code></a>
+properties.</p>
+<p>It is enabled by default. It can be disabled when a MeshInstance3D is not
+needed, but collision, navigation or occluder are. When disabled, the property <code>Remove Mode</code>
+becomes available, where you can choose between:</p>
+<ul>
+<li><strong><code>Remove by Node3D</code></strong>: The MeshInstance3D is replaced by a Node3D. Children are kept.</li>
+<li><strong><code>Free Node</code></strong>: The MeshInstance3D and its children are removed.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If <code>Remove Node</code> option is set to <code>Free Node</code>, generated colliders and navigation
+regions will be added as sibling, independent of their <code>Add as</code> property.</p>
+</div>
+<p>List of Godot properties:</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>Godot documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layers</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_visualinstance3d.html#class-visualinstance3d-property-layers">VisualInstance3D.layers</a></td>
+</tr>
+<tr>
+<td>Transparency</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_geometryinstance3d.html#class-geometryinstance3d-property-transparency">GeometryInstance3D.transparency</a></td>
+</tr>
+<tr>
+<td>Cast Shadow</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_geometryinstance3d.html#class-geometryinstance3d-property-cast-shadow">GeometryInstance3D.cast_shadow</a></td>
+</tr>
+<tr>
+<td>Ignore Occlusion Culling</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_geometryinstance3d.html#class-geometryinstance3d-property-ignore-occlusion-culling">GeometryInstance3D.ignore_occlusion_culling</a></td>
+</tr>
+<tr>
+<td>GI Mode</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_geometryinstance3d.html#class-geometryinstance3d-property-gi-mode">GeometryInstance3D.gi_mode</a></td>
+</tr>
+<tr>
+<td>Lightmap Textel Scale</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_geometryinstance3d.html#class-geometryinstance3d-property-gi-lightmap-texel-scale">GeometryInstance3D.gi_lightmap_texel_scale</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="generate-collision">Generate Collision</h3>
+<p>The <code>Generate Collision</code> checkbox enables creating collision bodies and shapes. Like <code>-col</code> and <code>-convcol</code>
+<a href="https://docs.godotengine.org/en/4.4/tutorials/assets_pipeline/importing_3d_scenes/node_type_customization.html">suffixes</a>.</p>
+<p>You can choose what type of body (CollisionObject3D) to use as collider, if the shape
+is trimesh (ConcavePolygonShape3D) or convex (ConvexPolygonShape3D) and several properties.</p>
+<p>The <code>Add as</code> property determines if the body and shapes will be added as sibling
+or child of the MeshInstance3D node.</p>
+<hr />
+<h4 id="body">Body</h4>
+<p>There are several body types available. There's also the <code>Only Shapes</code> option, which
+creates collision shapes without a body.</p>
+<p>List of Godot properties shared by all bodies:</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>Godot documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Disable Mode</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_collisionobject3d.html#class-collisionobject3d-property-disable-mode">CollisionObject3D.disable_mode</a></td>
+</tr>
+<tr>
+<td>Collision Layer</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_collisionobject3d.html#class-collisionobject3d-property-collision-layer">CollisionObject3D.collision_layer</a></td>
+</tr>
+<tr>
+<td>Collision Mask</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_collisionobject3d.html#class-collisionobject3d-property-collision-mask">CollisionObject3D.collision_mask</a></td>
+</tr>
+<tr>
+<td>Priority</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_collisionobject3d.html#class-collisionobject3d-property-collision-priority">CollisionObject3D.collision_priority</a></td>
+</tr>
+<tr>
+<td>Ray Pickable</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_collisionobject3d.html#class-collisionobject3d-property-input-ray-pickable">CollisionObject3D.input_ray_pickable</a></td>
+</tr>
+<tr>
+<td>Capture on Drag</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_collisionobject3d.html#class-collisionobject3d-property-input-capture-on-drag">CollisionObject3D.input_capture_on_drag</a></td>
+</tr>
+</tbody>
+</table>
+<p>Body types:</p>
+<h5 id="static-body">Static Body</h5>
+<p>Creates a <a href="https://docs.godotengine.org/en/4.4/classes/class_staticbody3d.html">StaticBody3D</a>.</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>Godot documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Constant Linear Velocity</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_staticbody3d.html#class-staticbody3d-property-constant-linear-velocity">StaticBody3D.constant_linear_velocity</a></td>
+</tr>
+<tr>
+<td>Constant Angular Velocity</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_staticbody3d.html#class-staticbody3d-property-constant-angular-velocity">StaticBody3D.constant_angular_velocity</a></td>
+</tr>
+<tr>
+<td>Physics Material Override Path</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_staticbody3d.html#class-staticbody3d-property-physics-material-override">StaticBody3D.physics_material_override</a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>Physics Material Override Path</code> should be a path or uid of a PhysicsMaterial
+saved to the disk as a resource.</p>
+</div>
+<h5 id="animatable-body">Animatable Body</h5>
+<p>Creates an <a href="https://docs.godotengine.org/en/4.4/classes/class_animatablebody3d.html">AnimatableBody3D</a>.</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>Godot documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sync to Physics</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_animatablebody3d.html#class-animatablebody3d-property-sync-to-physics">AnimatableBody3D.sync_to_physics</a></td>
+</tr>
+<tr>
+<td>Physics Material Override Path</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_staticbody3d.html#class-staticbody3d-property-physics-material-override">StaticBody3D.physics_material_override</a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>Physics Material Override Path</code> should be a path or uid of a PhysicsMaterial
+saved to the disk as a resource.</p>
+</div>
+<h5 id="rigid-body">Rigid Body</h5>
+<p>Creates a <a href="https://docs.godotengine.org/en/4.4/classes/class_rigidbody3d.html">RigidBody3D</a>.</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>Godot documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mass</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_rigidbody3d.html#class-rigidbody3d-property-mass">StaticBody3D.mass</a></td>
+</tr>
+<tr>
+<td>Gravity Scale</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_rigidbody3d.html#class-rigidbody3d-property-gravity-scale">StaticBody3D.gravity_scale</a></td>
+</tr>
+<tr>
+<td>Sleeping</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_rigidbody3d.html#class-rigidbody3d-property-sleeping">StaticBody3D.sleeping</a></td>
+</tr>
+<tr>
+<td>Can Sleep</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_rigidbody3d.html#class-rigidbody3d-property-can-sleep">StaticBody3D.can_sleep</a></td>
+</tr>
+<tr>
+<td>Lock Rotation</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_rigidbody3d.html#class-rigidbody3d-property-lock-rotation">StaticBody3D.lock_rotation</a></td>
+</tr>
+<tr>
+<td>Freeze</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_rigidbody3d.html#class-rigidbody3d-property-freeze">StaticBody3D.freeze</a></td>
+</tr>
+<tr>
+<td>Freeze Mode</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_rigidbody3d.html#class-rigidbody3d-property-freeze-mode">StaticBody3D.freeze_mode</a></td>
+</tr>
+<tr>
+<td>Physics Material Override Path</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_rigidbody3d.html#class-rigidbody3d-property-physics-material-override">StaticBody3D.physics_material_override</a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>Physics Material Override Path</code> should be a path or uid of a PhysicsMaterial
+saved to the disk as a resource.</p>
+</div>
+<h5 id="character-body">Character Body</h5>
+<p>Creates a <a href="https://docs.godotengine.org/en/4.4/classes/class_characterbody3d.html">CharacterBody3D</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Currently there are no properties for Character Body</p>
+</div>
+<h5 id="area">Area</h5>
+<p>Creates an <a href="https://docs.godotengine.org/en/4.4/classes/class_area3d.html">Area3D</a>.</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>Godot documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monitoring</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_area3d.html#class-area3d-property-monitoring">Area3D.monitoring</a></td>
+</tr>
+<tr>
+<td>Monitorable</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_area3d.html#class-area3d-property-monitorable">Area3D.monitorable</a></td>
+</tr>
+<tr>
+<td>Priority</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_area3d.html#class-area3d-property-priority">Area3D.priority</a></td>
+</tr>
+</tbody>
+</table>
+<h5 id="shape-only">Shape Only</h5>
+<p>Doesn't create a CollisionObject3D. Shapes are created and added accordingly.</p>
+<hr />
+<h4 id="shape">Shape</h4>
+<p>Creates a CollisionShape3D node. The shape can a ConcavePolygonShape3D (trimesh)
+or a ConvexPolygonShape3D (convex).</p>
+<p>The option <code>No Shape</code> will skip the generation of shapes.</p>
+<h5 id="trimesh">Trimesh</h5>
+<p>Creates a <a href="https://docs.godotengine.org/en/4.4/classes/class_concavepolygonshape3d.html">ConcavePolygonShape3D</a>.</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>Godot documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Backface Collision</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_concavepolygonshape3d.html#class-concavepolygonshape3d-property-backface-collision">ConcavePolygonShape3D.backface_collision</a></td>
+</tr>
+<tr>
+<td>Shape Disabled</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_collisionshape3d.html#class-collisionshape3d-property-disabled">CollisionShape3D.disabled</a></td>
+</tr>
+</tbody>
+</table>
+<h5 id="convex">Convex</h5>
+<p>Creates a <a href="https://docs.godotengine.org/en/4.4/classes/class_convexpolygonshape3d.html">ConvexPolygonShape3D</a>.</p>
+<p>There are three modes for the creation of convex shapes:</p>
+<ul>
+<li><strong>Single</strong>: Creates a single collision shape. Fast but less accurate.</li>
+<li><strong>Simplified</strong>: Similar to single. Can result in a simpler geometry, at the cost of accuracy.</li>
+<li><strong>Multiple</strong>: Creates multiple collision shapes. Middle-ground between Single Convex and Concave polygon collision (trimesh).</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>Godot documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mode</td>
+<td>see above</td>
+</tr>
+<tr>
+<td>Shape Disabled</td>
+<td><a href="https://docs.godotengine.org/en/4.4/classes/class_collisionshape3d.html#class-collisionshape3d-property-disabled">CollisionShape3D.disabled</a></td>
+</tr>
+</tbody>
+</table>
+<h5 id="no-shape">No Shape</h5>
+<p>Does not create collision shapes.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If body is set to <code>Only Shapes</code> and shape is set to <code>No Shape</code>, the collision
+generation will be skipped.</p>
+</div>
+<hr />
+<h3 id="generate-navigation">Generate Navigation</h3>
+<p>The <code>Generate Navigation</code> checkbox enables the creation of a NavigationRegion, similar
+to the <code>-navmesh</code> <a href="https://docs.godotengine.org/en/4.4/tutorials/assets_pipeline/importing_3d_scenes/node_type_customization.html">suffix</a>.</p>
+<p>The <code>Add as</code> property determines if the NavigationRegion node will be added as child
+of the MeshInstance3D or as its sibling.</p>
+<p>The following Godot properties are available:</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>Godot documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enabled</td>
+<td><a href="https://docs.godotengine.org/en/stable/classes/class_navigationregion3d.html#class-navigationregion3d-property-enabled">NavigationRegion3D.enabled</a></td>
+</tr>
+<tr>
+<td>Use Edge Connections</td>
+<td><a href="https://docs.godotengine.org/en/stable/classes/class_navigationregion3d.html#class-navigationregion3d-property-use-edge-connections">NavigationRegion3D.use_edge_connections</a></td>
+</tr>
+<tr>
+<td>Navigation Layers</td>
+<td><a href="https://docs.godotengine.org/en/stable/classes/class_navigationregion3d.html#class-navigationregion3d-property-navigation-layers">NavigationRegion3D.navigation_layers</a></td>
+</tr>
+<tr>
+<td>Enter Cost</td>
+<td><a href="https://docs.godotengine.org/en/stable/classes/class_navigationregion3d.html#class-navigationregion3d-property-enter-cost">NavigationRegion3D.enter_cost</a></td>
+</tr>
+<tr>
+<td>Travel Cost</td>
+<td><a href="https://docs.godotengine.org/en/stable/classes/class_navigationregion3d.html#class-navigationregion3d-property-travel-cost">NavigationRegion3D.travel_cost</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="generate-occluder">Generate Occluder</h3>
+<p>Occluders can be generated from the mesh by selecting this option.</p>
+<p>At the moment, the functionality to bake occluders
+<a href="https://github.com/godotengine/godot/pull/90590">is not exposed</a>. The occluders
+are generated by adding the <a href="https://docs.godotengine.org/en/4.4/tutorials/assets_pipeline/importing_3d_scenes/node_type_customization.html">suffix</a>
+<code>-occ</code> to the MeshInstance3D during import.</p>
+<p>Please read the page
+<a href="https://docs.godotengine.org/en/4.4/tutorials/3d/occlusion_culling.html">Occlusion culling</a>
+on the Godot documentation to learn more.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../install/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../faq/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

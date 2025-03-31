@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Installing B2GD - B2GD Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Installing B2GD";
+        var mkdocs_page_input_path = "install.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> B2GD Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Installing B2GD</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#installing-the-godot-plugin">Installing the Godot plugin</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#installing-the-blender-extension">Installing the Blender extension</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#blender-export-settings">Blender export settings</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../usage/">Usage</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQ</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">B2GD Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Installing B2GD</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="installing-b2gd">Installing B2GD</h1>
+<p>To install B2GD you need to download the Blender extension and the Godot plugin.
+Check the releases page. TODO: add link</p>
+<h2 id="installing-the-godot-plugin">Installing the Godot plugin</h2>
+<ul>
+<li>Download the godot plugin zip file from the github releases page.</li>
+<li>Extract the downloaded file.</li>
+<li>Copy the extracted b2gd folder to the add-on folder in your project's files. It
+should look like <code>project_root/addons/b2gd/</code></li>
+<li>Enable B2GD in Project Settings &gt; Plugins.</li>
+</ul>
+<p>TODO: add image showing folder structure</p>
+<p>TODO: add image of Project Settings &gt; Plugins ... in the default theme 😔</p>
+<p>You might need to reimport some files if they don't get updated automatically.</p>
+<p>TODO: put in asset lib and explain how to install from there</p>
+<p>More information: <a href="https://docs.godotengine.org/en/stable/tutorials/plugins/editor/installing_plugins.html" target="_blank">Installing Plugins</a> on Godot Documentation.</p>
+<h2 id="installing-the-blender-extension">Installing the Blender extension</h2>
+<ul>
+<li>Download the blender extension zip file from the github releases page TODO: add link.</li>
+<li>In Blender, go to Edit &gt; Preferences.</li>
+<li>Go to the "Get Extensions" tab.</li>
+<li>Click the arrow on the top right and select "Install from Disk".</li>
+<li>Select the downloaded file in the file explorer.</li>
+</ul>
+<p>TODO: add image with preferences panel,arrow clicked, menu and "Install from Disk" hightlighted</p>
+<p>B2GD should be visible in the extensions list.</p>
+<ul>
+<li>Click on the arrow on the right side.</li>
+<li>Check the "Add-on enabled" checkbox.</li>
+</ul>
+<p>TODO: add image showing the menu above</p>
+<p>The panel B2GD should be present on the 3D view sidebar. You can toggle the sidebar
+with the default <strong>N</strong> shortcut or going to View &gt; Sidebar.</p>
+<p>TODO: add image showing B2GD panel</p>
+<p>Hopefully I'll be able to put it on the Blender extensions thing. Installing would
+be so much easier.</p>
+<p>More information: <a href="https://docs.blender.org/manual/en/latest/editors/preferences/extensions.html" target="_blank">Get Extensions</a> on Blender Manual.</p>
+<h2 id="blender-export-settings">Blender export settings</h2>
+<p>The way the addon works is by adding custom properties to the objects. These properties
+are read in Godot during the import process and nodes are configured accordingly.</p>
+<p>Blender doesn't export custom properties by default. You have to enable it on the
+GLTF export settings.</p>
+<ul>
+<li>Go to File &gt; Export &gt; glTF 2.0 (.glb/.gltf).</li>
+<li>On the right panel, expand "Include" and check "Custom Properties".</li>
+</ul>
+<p>You may want to check "Remember Export Settings" so you won't need to do the steps above
+everytime you open the file. Remembering settings is required when using blend files in your
+project instead of gltf.</p>
+<p>By the way, export settings are file based. You have to do the steps above in every different file.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>A button was added at the top of the B2GD panel to enable Custom Properties on
+the GLTF Export Settings. The button only shows when custom properties aren't
+enabled.</p>
+</div>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../usage/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
