@@ -1,0 +1,42 @@
+.rst-versions { display: none; }
+
+@media screen and (min-width: 1100px) {
+    .wy-grid-for-nav, .wy-nav-side {
+        margin-left: calc((100vw - 1100px) / 2);
+    }
+
+    .wy-body-for-nav {
+        background-color: #edf0f2;
+
+        background: #e87d0d;
+        background: linear-gradient(180deg, #e87d0d 49%, white 49%, white 51%, #478cbf 51%);
+        background-attachment: fixed;
+    }
+
+    .wy-side-nav-search { background-color: #478cbf;}
+
+    .wy-nav-content-wrap {
+        background-color: transparent;
+    }
+}
+
+.flex-two-columns {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-two-columns > *:first-child {
+    margin: 16px;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(-1turn);
+    }
+}
+
+.infinite-spinning {
+    animation: rotate 3s linear infinite;
+}
